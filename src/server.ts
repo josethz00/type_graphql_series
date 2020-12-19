@@ -1,10 +1,17 @@
+import * as dotenv from 'dotenv';
+dotenv.config({
+    path: '.env'
+});
+
 import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server-express';
 
 import Express from 'express';
 import { createServer } from 'http';
 import cors from 'cors';
+
 import { createSchema } from './utils/createSchema';
+import './utils/connection';
 
 
 const PORT = 4000 || process.env.PORT;
